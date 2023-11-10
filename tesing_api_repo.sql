@@ -1,9 +1,13 @@
 -- Databricks notebook source
-DROP TABLE IF EXISTS default.employees_data;
+CREATE DATABASE IF NOT EXISTS test;
 
 -- COMMAND ----------
 
-create table default.employees_data (
+DROP TABLE IF EXISTS test.employees_data;
+
+-- COMMAND ----------
+
+create table test.employees_data (
 	emp_id int,
 	first_name string,
 	last_name string,
@@ -13,7 +17,7 @@ create table default.employees_data (
 
 -- COMMAND ----------
 
-insert into MOCK_DATA (id, first_name, last_name, email, gender) 
+insert into test.employees_data (id, first_name, last_name, email, gender) 
 values 
 (1, 'Demetrius', 'Leathlay', 'dleathlay0@lycos.com', 'Male'), 
 (2, 'Marlon', 'Charity', 'mcharity1@parallels.com', 'Male'), 
